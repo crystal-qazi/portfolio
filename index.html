@@ -1306,35 +1306,181 @@ Technology </li>
 <li><a target="_blank" href="#"><span class="crt-icon crt-icon-youtube"></span></a></li>
 </ul>
 </header>
+
+
+<!-- Form Section -->
+
+
 <h3>Fell free to contact me in case of any question</h3>
 <!-- <div role="form" class="wpcf7" id="wpcf7-f46-p5-o1" lang="en-US" dir="ltr">
-<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="/designer/#wpcf7-f46-p5-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>-->
+<!-- <form action="#"  method="get" class="wpcf7-form init" novalidate="novalidate" data-status="init">
 <div style="display: none;">
-<input type="hidden" name="_wpcf7" value="46">
-<input type="hidden" name="_wpcf7_version" value="5.5.4">
-<input type="hidden" name="_wpcf7_locale" value="en_US">
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f46-p5-o1">
-<input type="hidden" name="_wpcf7_container_post" value="5">
-<input type="hidden" name="_wpcf7_posted_data_hash" value>
+    <input type="text" name="send?phone=03453151738&text=" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
 </div>
+
 <p><label> Your Name (required)<br>
-<span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label></p>
+<span class="wpcf7-form-control-wrap your-name"><input type="text" name="*Name:*" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label></p>
 <p><label> Your Email (required)<br>
-<span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false"></span> </label></p>
+<span class="wpcf7-form-control-wrap your-email"><input type="email" name="*Email:*" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false"></span> </label></p>
 <p><label> Subject<br>
-<span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span> </label></p>
+<span class="wpcf7-form-control-wrap your-subject"><input type="text" name="*Subject*" value size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span> </label></p>
 <p><label> Your Message<br>
 <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label></p>
-<p><input type="submit" value="Send" class="wpcf7-form-control has-spinner wpcf7-submit"></p>
+<p><input type="submit" value="submit"   ></p>
 <div class="wpcf7-response-output" aria-hidden="true"></div>
+</form> -->
+
+<form action="#" id ="form_id" method="GET" accept-charset="utf-8">
+    <div style="display: none;">
+    <!-- <input type="text" name="phone" value size="40"  aria-required="true" aria-invalid="false"> -->
+    <input type="number" name="phone" value="923453048496" size="40"  aria-required="true" aria-invalid="false">
+    
+</div>
+    <input type="text" name="text" value="Name" size="40"  style="white-space: pre-line" >
+    <input type="text" name=" Name " value="test" value size="40"  aria-required="true" aria-invalid="false"></span> </label></p>
+    <!-- <label>name</label> -->
+    <input type="text" name=" Massg " value="ss" value size="40"  aria-invalid="false"></span> </label></p>
+    <!-- <label>msg</label> -->
+
+    <input type="submit"  value="submit">
 </form>
-</div> -->
 
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6AK7yAtSUt0gng-9f2YITxlYH6IY7Wm-LdAF9vBHDt6ngHw/viewform?embedded=true" width="640" height="959" frameborder="0" marginheight="0" marginwidth="0">
+<script>
+    $("#form_id").attr("action"); //Will retrieve it
+
+$("#form_id").attr("action", "https://web.whatsapp.com/send?phone=03453151738&text="); //Will set it
+</script>
+
+
+
+
+<!-- <form action="https://web.whatsapp.com/send?phone=03453151738&text=" method="get"> -->
+    <form    method="get"  name="order">
+        <label>Name<input name="*Name*" type="text">
+        <label>Subject<input name="*Subject*" type="text">
+        <label>Msg<input name="*Msg*" type="text">
+        <button id="cmdTest" type="submit"  >Submit</button>
+      </form>
+
+      
+    
+    
+
+  <script>
+    const form = document.forms.order;
+    function handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = [...formData.entries()];
+        const asString = data
+      .map(x => `${encodeURIComponent(x[0])} , ${encodeURIComponent(x[1])}`)
+      .join(' ');
+  console.log(asString);
+  window.location.replace("https://web.whatsapp.com/send?" + "phone=+923453151738&text=" + asString )
+
+      }
+      
+      form.addEventListener('submit', handleSubmit);
+
+
+      /*
+    
+
+    let url = new URL(window.location);
+    let params = new URLSearchParams(url.search.slice(1));
+    // let params = new URLSearchParams(url.search);
+
+    var title = params.get('title');
+    var des = params.get('description');
+    var test = params.get('test');
+    
+    let obj = {
+        Title: title,
+        Descreption: des,
+        test: test
+    }
+    
+
+        // Use JSON.stringify() function to
+        // convert object into string
+        console.log(JSON.stringify(obj));
+
+        // Function to Serialize an Object into a
+        // list of URL query parameters
+        function GFG_Fun() {
+            let s = "";
+            for (let key in obj) {
+                if (s != "") {
+                    s += " ";
+                }
+                s += (key + "=" + encodeURIComponent(obj[key]));
+            }
+            console.log( s);
+            window.location.replace("https://web.whatsapp.com/send?" + "phone=+923453151738&text=" + s )
+
+        }
+
+     
+    
+
+ */
+
+
+
+
+
+
+
+
+    /*
+
+    for (let p of params) {
+        
+        function GFG_Fun() {
+            
+            let s = Object.keys(p).map(function (key) {
+                return p[key];
+            }).join(' ');
+         
+            // console.log( s );
+            // url.search = s.toString();
+          //  console.log(url)
+
+        // var string = params.toString()
+         // const new_url = "https://web.whatsapp.com/send?" + "phone=+923453151738&text=" +  string;
+         // window.location.href = new_url;
+         //location.href = "https://web.whatsapp.com/send?phone=+923453151738&text=" + url.search;
+             //window.history.replaceState({}, '', '/?' + s.toString())
+           //  window.location.replace("https://web.whatsapp.com/send?" + "phone=+923453151738&text=" +  string)
+           // const test =  window.location.replace(" " + "phone=+923453151738&text=" +  s.toString())
+           //  history.replaceState(null, null, "s" + "?"+ "phone=+923453151738&text=" + s.toString());
+            //history.replaceState(pars_url,null,"?")
+            // console.log(JSON.stringify(s));
+            
+            
+            
+        }
+        
+         
+        GFG_Fun();
+
+       // console.log(JSON.stringify(p));
+      }*/
+      
+  </script>
+
+  
+<!-- end form section -->
+
+<!--
+</div>--> 
+
+
+<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6AK7yAtSUt0gng-9f2YITxlYH6IY7Wm-LdAF9vBHDt6ngHw/viewform?embedded=true" width="640" height="959" frameborder="0" marginheight="0" marginwidth="0">
     Loading…
-</iframe>
+</iframe> -->
 </div>
 
 <!-- Map -->
@@ -1413,9 +1559,13 @@ Technology </li>
 <input type="submit" id="submit" class="btn btn-primary" value="Try Again">
 </div>
 </form>
+
 </section> </aside>
 </div>
-</div> -->
+</div>--> 
+
+
+
 <footer id="crtFooter" class="crt-container-lg">
 <div class="crt-container">
 <div class="crt-container-sm clear-mrg text-center">
